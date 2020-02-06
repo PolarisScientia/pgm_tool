@@ -94,8 +94,8 @@ def main(argv):
                     #pythonic unpacking of list of lists above
                     height = len(raster)
                     width = len(raster[1])
-                    o.write(bytes('P5' + '\n' + '# CREATOR: pgm_reading.py 0.01\n', encoding='utf8'))
-                    o.write(bytes(str(width) + ' ' + str(height) + ' ' + str(255) + '\n', encoding='utf8'))
+                    o.write(bytes('P5' + '\n' + '# CREATOR: pgm_reading.py 0.02\n', encoding='utf8'))
+                    o.write(bytes(str(width) + ' ' + str(height) + '\n' + str(255) + '\n', encoding='utf8'))
                     rasterbytes = bytes(flat_raster)
                     o.write(rasterbytes)
             
